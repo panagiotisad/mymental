@@ -17,4 +17,4 @@ Python · Django · HTML · CSS
 
 Deployed on Render. The application may take a few seconds to start.
 
-**Live Demo:** https://mymental-django.onrender.com/ |if you dont want to make an account use username:guest password:guest123
+**Live Demo:** https://mymental-django.onrender.com/ | if you dont want to make an account use username : guest password: guest123
