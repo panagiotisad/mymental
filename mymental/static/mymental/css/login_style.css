@@ -1,0 +1,105 @@
+.login_box {
+  min-height: 400px;
+  height: auto;
+  padding-bottom: 15px;
+  width: 500px;
+  background-color: hsl(202, 64%, 45%);
+  margin: 0 auto;
+}
+
+
+.login_title {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-right: 18px;
+  font-size: 35px;
+  padding-top: 25px;
+  font-weight: bold;
+}
+
+.line {
+  height: 7px;
+  width: 500px;
+  background-color: white;
+}
+
+.button {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 35px;
+  height: 65px;
+  width: 200px;
+  border: solid rgb(202, 220, 231) 2px;
+  border-radius: 30px;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 85%);
+}
+
+.button:active {
+  transform: translate(2px, 2px);
+}
+
+.register {
+  color: white;
+  transition: 0.3s;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.no_acc {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: white;
+  margin-right: 10px;
+  margin-left: 130px;
+}
+
+.form_group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.form_group span:first-child {
+  flex: 0 0 160px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.input_text {
+  margin-right: 20px;
+}
+
+.input_field input {
+  width: 250px;
+  height: 35px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.input_field input:focus {
+  background-color: rgb(211, 215, 216);
+}
+
+.form_errors {
+  display: block;
+  width: 100%;
+  flex-basis: 100%;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #FFD700;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+{% extends 'main_page_template.html' %}
+{% load static %}
+{% block body_class %}to_do_list{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'mymental/css/to_do_list_style.css' %}">
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" placeholder="add a task" name="task_title" class="task_input" autocomplete="off">
+</form>
+<div class="box">
+  <ul class="unordered_list">
+    {% for task in tasks %}
+    <li class="list_item">
+      <form method="POST" action="{% url 'to_do_list_checkbox' task.id %}">
+        {% csrf_token %}<input class="checkboxes" type="checkbox" {% if task.is_complete %}checked{% endif %}
+          onchange="this.form.submit()"></input>{{task.task_title}}
+        <a href="{% url 'task_delete' task.id %}" class="x">❌</a>
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,1 @@
+web: gunicorn mymental_config.wsgi

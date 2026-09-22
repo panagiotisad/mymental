@@ -1,0 +1,131 @@
+body {
+  margin: 0px;
+}
+
+.for_box_centering {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.rate_your_day {
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: -3px -3px 4px hsl(226, 13%, 40%);
+  text-shadow: 3px 3px 4px hsl(226, 13%, 40%);
+}
+
+.box {
+  height: 680px;
+  width: 500px;
+  background-color: hsl(202, 64%, 45%);
+  border: 2px solid rgb(223, 231, 255);
+}
+
+
+.line {
+  height: 1px;
+  background-color: rgb(223, 231, 255);
+}
+
+
+.date {
+  margin-top: 0;
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: -3px -3px 4px hsl(226, 13%, 40%);
+  text-shadow: 3px 3px 4px hsl(226, 13%, 40%);
+}
+
+.submitted {
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: -3px -3px 4px hsl(226, 13%, 40%);
+  text-shadow: 3px 3px 4px hsl(226, 13%, 40%);
+  background-color: hsla(206, 72%, 24%, 0.582);
+  padding: 20px;
+}
+
+.mood_productivity {
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 30px;
+  text-shadow: -3px -3px 4px hsl(226, 13%, 40%);
+  text-shadow: 3px 3px 4px hsl(226, 13%, 40%);
+}
+
+.submit {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 45px;
+  height: 65px;
+  width: 200px;
+  border: solid rgb(202, 220, 231) 2px;
+  border-radius: 30px;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 20px;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 85%);
+}
+
+.submit:active {
+  transform: translate(2px, 2px);
+}
+
+
+.rate_buttons form div,
+.rate_buttons form p,
+.rate_buttons form ul {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 20px 0 !important;
+}
+
+
+.rate_buttons label {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  align-items: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  font-size: 2rem !important;
+  color: white !important;
+}
+
+.rate_buttons input[type="radio"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid white !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+}
+
+.rate_buttons input[type="radio"]:checked {
+  background-color: white !important;
+}

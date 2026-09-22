@@ -1,0 +1,31 @@
+{% extends 'main_page_template.html' %}
+{% load static %}
+{% block body_class %}main-page{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'mymental/css/rating_page_style.css' %}">
+<div class="for_box_centering">
+  <h1 class="date">📅date: {{date}}</h1>
+  {% if submitted == False %}
+  <div class="box">
+    <h2 class="rate_your_day">rate your day</h2>
+    <hr class="line">
+    <div class="rate_buttons">
+      <form method="post" action="{% url 'rating' %}">
+        {% csrf_token %}
+        <h2 class="mood_productivity">mood</h2>
+        {{ rating_data.mood_rating }}
+        <h2 class="mood_productivity">productivity</h2>
+        {{ rating_data.productivity_rating }}
+        <input type="submit" class="submit">
+      </form>
+    </div>
+  </div>
+  {% else %}
+  <div class="submitted">
+    <h1>Rating submitted successfully</h1>
+    <h2>come again tomorrow!</h2>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

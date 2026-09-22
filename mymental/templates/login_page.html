@@ -1,0 +1,38 @@
+{% extends 'authentication_page_template.html' %}
+{% load static %}
+{% block body_class %}login-page{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'mymental/css/login_style.css' %}">
+<div class="login_box">
+  <h3 class="login_title">Login</h3>
+  <div class="line"></div>
+  <br>
+  <form method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form_group">
+      <span class="input_text">{{ field.label_tag }}</span>
+      <span class="input_field">{{ field }}</span>
+      {% if field.errors %}
+      <div class="form_errors">
+        {% for error in field.errors %}
+        <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+    {% if form.non_field_errors %}
+    <div class="form_errors">
+      {% for error in form.non_field_errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <input type="submit" class="button" value="Log In">
+  </form>
+  <span class="no_acc">No account?</span>
+  <span><a href="{% url 'register_page' %}" class="register">register here</a></span>
+</div>
+{% endblock %}

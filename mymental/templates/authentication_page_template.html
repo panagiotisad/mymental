@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>MyMental login</title>
+  <link rel="icon" type="image/jpg" href="{% static 'mymental/images/Mental-Health-Icon-edit-online.jpg' %}">
+  <style>
+    body {
+      background-image: url("{% static 'mymental/images/cyan-mountain-and-moon-illustration-pgqiu9itxfy7mjam.jpg' %}");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    .title {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 30px;
+      color: rgb(245, 240, 240);
+      font-size: 75px;
+      text-shadow: -3px -3px 4px hsl(226, 13%, 40%);
+      text-shadow: 3px 3px 4px hsl(226, 13%, 40%);
+    }
+
+    .success {
+      padding: 20px;
+      margin: 20px;
+      display: inline-block;
+      color: rgba(255, 255, 255, 0.938);
+      font-family: sans-serif;
+      font-size: 35px;
+      background-color: rgba(51, 128, 0, 0.432);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+  <header>
+    <h1 class="title"><b>MyMental</b></h1>
+  </header>
+  {% if messages %}
+  {% for message in messages %}
+  <div class="{{ message.tags }}">
+    {{ message }}
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% block content %}
+  {% endblock %}
+</body>
+
+</html>

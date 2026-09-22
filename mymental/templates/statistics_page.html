@@ -1,0 +1,38 @@
+{% extends 'main_page_template.html' %}
+{% load static %}
+{% block body_class %}statistics-page{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'mymental/css/statistics_style.css' %}">
+
+<div class="statistics-container">
+  <div class="rating_list">
+    <h1>Last Ratings 📈</h1>
+    <hr class="line">
+    <div class="table-header">
+      <span class="labels">DATE 📅</span>
+      <span class="labels">MOOD RATING 😁</span>
+      <span class="labels">PRODUCTIVITY RATING 🚀</span>
+    </div>
+  </div>
+
+  <div class="box">
+    <ul class="for_dot">
+      {% for r in rating_data %}
+      <li class="rating-row">
+        <span class="date">{{ r.date }}</span>
+        <span class="mood_rating">{{ r.mood_rating }}</span>
+        <span class="prod_rating">{{ r.productivity_rating }}</span>
+      </li>
+      {% empty %}
+      <li class="no_ratings">No ratings yet.</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="avg">
+    <h2>Last 7 days mood average: {{ mood_avg }}</h2>
+    <h2>Last 7 days productivity average: {{ prod_avg }}</h2>
+  </div>
+</div>
+{% endblock %}

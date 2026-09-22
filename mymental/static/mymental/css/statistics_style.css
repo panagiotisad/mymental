@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.statistics-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rating_list {
+  margin-top: 80px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-shadow: -2px -2px 3px hsl(226, 13%, 40%), 2px 2px 3px hsl(226, 13%, 40%);
+}
+
+.rating_list h1 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.line {
+  height: 2px;
+  background-color: white;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.table-header,
+.rating-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.table-header {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 3px hsl(226, 13%, 40%);
+}
+
+.box {
+  width: 100%;
+}
+
+.for_dot {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rating-row {
+  background-color: hsla(209, 90%, 33%, 0.699);
+  padding: 15px 10px;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  text-shadow: 2px 2px 3px hsl(226, 13%, 40%);
+  box-sizing: border-box;
+}
+
+.avg {
+  margin-top: 50px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: hsla(209, 84%, 47%, 0.473);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.avg h2 {
+  margin: 10px 0;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+.no_ratings {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 20px;
+}
